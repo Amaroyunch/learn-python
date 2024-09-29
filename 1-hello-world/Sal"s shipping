@@ -1,0 +1,36 @@
+# Sal's shipping company
+#Weight of Package	Price per Pound	Flat Charge
+"Ground shipping price"
+#2 lb or less	$1.50	$20.00
+#Over 2 lb but less than or equal to 6 lb	$3.00	$20.00
+#Over 6 lb but less than or equal to 10 lb	$4.00	$20.00
+#Over 10 lb	$4.75	$20.00
+"Ground shipping premium price"
+#Flat charge: $125
+"Drone shipping price is 3 times higher than grand shipping price"
+shipping_weight = 41.5
+#Ground shipping
+if shipping_weight <= 2:
+  cost = shipping_weight * 1.5 + 20
+elif shipping_weight <= 6:
+  cost = shipping_weight * 3 + 20
+elif shipping_weight <= 10:
+  cost = shipping_weight * 4 + 20
+else: cost = shipping_weight * 4.75 + 20
+print("Ground shipping price:",cost,"$")
+
+#Ground shipping premium
+premium_price = 125
+print("Premium price:", premium_price, "$")
+#Drone shipping
+if shipping_weight <= 2:
+  cost = shipping_weight * 4.5
+elif shipping_weight <= 6:
+  cost = shipping_weight * 9
+elif shipping_weight <= 10:
+  cost = shipping_weight * 12
+else: cost = shipping_weight * 14.25
+# Using round()
+rounded_cost= round(cost, 2)
+print("Drone shipping price:",rounded_cost,"$")
+
